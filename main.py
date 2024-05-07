@@ -58,14 +58,14 @@ def print_results(data, user_answers, user_data):
 
     # present all user answers and actual answers at the end
     # in a table format
-    print('Question'.ljust(COLUMN_WIDTH+1) + '|Your Answer'.ljust(COLUMN_WIDTH+1) + '|Actual Answer'.ljust(COLUMN_WIDTH+1))
+    print('Question'.ljust(COLUMN_WIDTH+1) + '|Actual Answer'.ljust(COLUMN_WIDTH+1) + '|Your Answer'.ljust(COLUMN_WIDTH+1))
     print('-' * TABLE_WIDTH)
     
     for question in data:
         # if text is longer than 50 characters, wrap onto next line
         # need to calculate this for all three columns
         # split on word boundaries, not in the middle of a word
-        strings = [question['question'], user_answers[question['question']], question['answer']]
+        strings = [question['question'], question['answer'], user_answers[question['question']]]
 
         while check_size(strings):
             get_result_string(strings)
