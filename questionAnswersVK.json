@@ -1,21 +1,5 @@
 [
     {
-        "question": "What is the Model View Controller?",
-        "answer": "A software architectural design pattern."
-    },
-    {
-        "question": "In an MVC, what does the 'model' do?",
-        "answer": "It describes the internal data representation."
-    },
-    {
-        "question": "In an MVC, what does the 'view' do?",
-        "answer": "It determines what the user sees."
-    },
-    {
-        "question": "In an MVC, what does the 'controller' do?",
-        "answer": "It binds it all together, handles logic and interactions."
-    },
-    {
         "question": "In Django, how do you get a list of all objects from a model?",
         "answer": "Model.objects.all()"
     },
@@ -220,5 +204,68 @@
     {
         "question": "What is SAX?",
         "answer": "Simple API for XML, a way to sequentially parse XML documents."
+    },
+
+    {
+        "question": "What happens when a user agent is asked to send a message?",
+        "answer": "The URL is turned into an IP address, a TCP connection is opened on a port as that IP address, and a request is made using a specific URL scheme and sent using that TCP connection."
+    },
+    {
+        "question": "What are some common response and request messaging protocols?",
+        "answer": "HTTP, HTTPS, FILE, FTP, MAILTO, NEWS, TELNET."
+    },
+    {
+        "question": "What is HTTP used for?",
+        "answer": "It is used to deliver virtually all files and other data using 8 bit characters, and also to transmit resources."
+    },
+    {
+        "question": "When should GET and POST be used?",
+        "answer": "GET should be used when the request is idempotent, and POST should be used when the request is not idempotent."
+    },
+    {
+        "question": "How can statelessness be dealt with?",
+        "answer": "By using cookies on the client side, hidden variables on the server side, and URL encoding."
+    },
+    
+    {
+        "question": "What is the Model View Controller?",
+        "answer": "A software architectural design pattern."
+    },
+    {
+        "question": "In an MVC, what does the 'model' do?",
+        "answer": "Represents the application data and the domain logic. Notifies the view of changes and enables the view to query the model."
+    },
+    {
+        "question": "In an MVC, what does the 'view' do?",
+        "answer": "The view is a visual representation of its model and acts as a presentation filter."
+    },
+    {
+        "question": "In an MVC, what does the 'controller' do?",
+        "answer": "It defines app behaviour and is the link between a user and the system."
+    },
+    {
+        "question": "What are the advantages of the Model View Controller pattern?",
+        "answer": "Easy maintenance, reusable code, enforces logical separation of concerns."
+    },
+    {
+        "question": "What are the disadvantages of the Model View Controller pattern?",
+        "answer": "Initial overheads splitting up concerns, debugging can be tricky, and it requires developer to understand patterns."
+    },
+
+    {
+        "question": "What are some characteristics of a Web Application Framework?",
+        "answer": "Inversion of control, extensibility, and non-modifiable framework code."
+    },
+    {
+        "question": "What are some advantages of using a Web Application Framework?",
+        "answer": "Rapid development, reduces boiler plate code, and increases security."
+    },
+    {
+        "question": "What are some disadvantages of using a Web Application Framework?",
+        "answer": "Can introduce code bloat, levels of abstraction generally introduce performance penalties, and can be poorly documented."
+    },
+    {
+        "question": "What is some common Web Application Framework functionality?",
+        "answer": "Web template system, caching, security, URL mapping, automatic configuration, form management."
     }
 ]
