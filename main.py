@@ -75,10 +75,12 @@ def print_results(data, user_answers, user_data):
         print('-' * TABLE_WIDTH)
 
 
-def main():
+def quiz(filenames):
     # read in questionAnswers.json file
-    with open('questionAnswers.json') as f:
-        data = json.load(f)
+    data = []
+    for filename in filenames:
+        with open(filename) as f:
+            data = data + json.load(f)
 
     # ask user questions from the file
     # randomise the order of questions
@@ -97,6 +99,10 @@ def main():
             user_data['questions_answered'] += 1
 
     print_results(data, user_answers, user_data)
+
+
+def main():
+    quiz(['questionAnswersVK.json'])
 
 
 if __name__ == '__main__':
