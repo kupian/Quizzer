@@ -181,5 +181,44 @@
     {
         "question": "What is the basic pattern that jQuery uses to manipulate elements?",
         "answer": "Select elements, manipulate elements, and return elements. $(selector).event(function() {...});"
+    },
+
+    {
+        "question": "What is the role of XML?",
+        "answer": "To describe the structure of semi-structured documents."
+    },
+    {
+        "question": "What can an XML element contain?",
+        "answer": "Text, attributes, other elements, or a combination of these."
+    },
+    {
+        "question": "What does it mean for an XML document to be well-formed?",
+        "answer": "The tags are case sensitive, each start tag has a corresponding end tag, tags are properly nested, attribute values must be quotes, and the document must have a root element."
+    },
+    {
+        "question": "What are the two types of pre-defined structures that can be used for XML?",
+        "answer": "Document Type Definition (DTD) and XML Schemas."
+    },
+
+    {
+        "question": "What does AJAX do?",
+        "answer": "Eliminates the need to reload a web page in order to get new data, and improves the interactive experience in web apps."
+    },
+    {
+        "question": "Briefly describe how AJAX works.",
+        "answer": "An event occurs in the web page, an XMLHttpRequest object is created, the object sends a request to the server, the server processes the request, and the server sends a response back to the web page. The web page then updates."
+    },
+    {
+        "question": "What are some XMLHttpRequest properties?",
+        "answer": "onreadystatechange, readyState, responseText, status, responseXML."
+    },
+    {
+        "question": "What are some XMLHttpRequest methods?",
+        "answer": "open(), send(), setRequestHeader(), abort()."
+    },
+
+    {
+        "question": "What is SAX?",
+        "answer": "Simple API for XML, a way to sequentially parse XML documents."
     }
 ]
