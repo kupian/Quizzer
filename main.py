@@ -5,11 +5,19 @@
 import json
 import random
 
+from similarityChecker import mark_answer
+
+class Colours:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    END = '\033[0m'
+
+
 def print_results(data, user_answers, user_data):
     COLUMN_WIDTH = 65
     TABLE_WIDTH = COLUMN_WIDTH * 3
 
-    def get_result_string(strings):
+    def get_result_string(strings, correct, score):
 
         def process_string(s, result):
             offset = s[0]
@@ -34,7 +42,10 @@ def print_results(data, user_answers, user_data):
         for i, s in enumerate(strings):
             result = process_string((i+1, s), result)
 
-        print(result)
+        if correct:
+            print(Colours.GREEN + result + str(score) + Colours.END)
+        else:
+            print(Colours.RED + result + str(score) + Colours.END)
         
     def reset_string(s):
         size = 0
@@ -67,10 +78,12 @@ def print_results(data, user_answers, user_data):
         # split on word boundaries, not in the middle of a word
         strings = [question['question'], question['answer'], user_answers[question['question']]]
 
+        correct, score = mark_answer(question['answer'], user_answers[question['question']])
+
         while check_size(strings):
-            get_result_string(strings)
+            get_result_string(strings, correct, score)
             strings = reset_strings(strings)
-        get_result_string(strings)
+        get_result_string(strings, correct, score)
         
         print('-' * TABLE_WIDTH)
 
