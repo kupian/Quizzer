@@ -65,6 +65,7 @@ def print_results(data, user_answers, user_data):
     # present user data
     print("-" * (COLUMN_WIDTH+2))
     print(f'You answered {user_data["questions_answered"]} out of {user_data["total_questions"]} questions'.ljust(COLUMN_WIDTH+1)+"|")
+    print(f'You got {user_data["correct_answers"]} out of {user_data["questions_answered"]} correct'.ljust(COLUMN_WIDTH+1)+"|")
     print("-" * TABLE_WIDTH)
 
     # present all user answers and actual answers at the end
@@ -101,7 +102,8 @@ def quiz(filenames):
     user_answers = {}
     user_data = {
         'questions_answered': 0,
-        'total_questions': 0
+        'total_questions': 0,
+        'correct_answers': 0,
     }
     for question in data:
         print(question['question'])
@@ -110,6 +112,8 @@ def quiz(filenames):
         user_data['total_questions'] += 1
         if len(user_answer) > 0:
             user_data['questions_answered'] += 1
+        if mark_answer(question['answer'], user_answer)[0]:
+            user_data['correct_answers'] += 1
 
     print_results(data, user_answers, user_data)
 
