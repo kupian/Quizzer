@@ -15,11 +15,13 @@ class Colours:
 
 
 def print_results(data, user_answers, user_data):
-    COLUMN_WIDTH = 65
+    COLUMN_WIDTH = 60
     TABLE_WIDTH = COLUMN_WIDTH * 3
 
     def get_result_string(strings, correct, score):
 
+        score = str(round(score, 4))
+        
         def process_string(s, result):
             offset = s[0]
             s = s[1].split()
@@ -44,9 +46,9 @@ def print_results(data, user_answers, user_data):
             result = process_string((i+1, s), result)
 
         if correct:
-            print(Colours.GREEN + result + str(score) + Colours.END)
+            print(Colours.GREEN + result + score + Colours.END)
         else:
-            print(Colours.RED + result + str(score) + Colours.END)
+            print(Colours.RED + result + score + Colours.END)
         
     def reset_string(s):
         size = 0
@@ -123,7 +125,7 @@ def quiz(filenames):
 
 
 def main():
-    quiz(['WADquiz.json'])
+    quiz(['OOSEquiz.json'])
 
 
 if __name__ == '__main__':

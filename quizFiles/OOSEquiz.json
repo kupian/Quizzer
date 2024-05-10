@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is a happy test?",
+        "answer": "When there are clean cases that go through the system."
+    },
+    {
+        "question": "What is a fail scenario?",
+        "answer": "Test scenarios where things go wrong."
+    },
+    {
+        "question": "What is functionality testing?",
+        "answer": "Testing the function itself."
+    },
+    {
+        "question": "What is usability testing?",
+        "answer": "Testing teh ease of use of the application."
+    },
+    {
+        "question": "What is security / penetration testing?",
+        "answer": "Testing if the system is secure and can survive attacks."
+    },
+    {
+        "question": "What is performance / efficiency testing?",
+        "answer": "Testing how fast and good the memory of the system is."
+    },
+    {
+        "question": "What is portability testing?",
+        "answer": "Testing if the application can be deployed on different browsers, OS, web, or mobile applications."
+    },
+    {
+        "question": "What are some examples of chaos engineering?",
+        "answer": "Server shutdowns, latency injections, resource exhaustion."
+    },
+    {
+        "question": "What is the need for accessibility testing?",
+        "answer": "Some customers / users may have disabilities like colour blindness, hearing impairments, etc."
+    },
+    {
+        "question": "Briefly describe A / B testing.",
+        "answer": "It is a method of comparing two versions of an application to see which performs better."
+    }
+]
