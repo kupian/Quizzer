@@ -119,7 +119,7 @@ def quiz(filenames):
 
 
 def main():
-    quiz(['questionAnswersVK.json'])
+    quiz(['WADquiz.json'])
 
 
 if __name__ == '__main__':
