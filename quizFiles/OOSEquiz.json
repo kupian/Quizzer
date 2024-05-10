@@ -38,5 +38,46 @@
     {
         "question": "Briefly describe A / B testing.",
         "answer": "It is a method of comparing two versions of an application to see which performs better."
+    },
+
+    {
+        "question": "What is the definition of coupling?",
+        "answer": "Coupling is the degree of interdependence between software modules."
+    },
+    {
+        "question": "What is the definition of cohesion?",
+        "answer": "Cohesion is the degree to which the elements inside a module belong together."
+    },
+    {
+        "question": "What are the different types of coupling?",
+        "answer": "Content coupling, common coupling, external coupling, control coupling, stamp coupling, data coupling."
+    },
+    {
+        "question": "What is content coupling?",
+        "answer": "When one module uses code from another."
+    },
+    {
+        "question": "What is common coupling?",
+        "answer": "When several modules have access to the same global data."
+    },
+    {
+        "question": "What is external coupling?",
+        "answer": "When several modules have access to an externally imposed data format."
+    },
+    {
+        "question": "What is control coupling?",
+        "answer": "When one module must control the flow of another module."
+    },
+    {
+        "question": "What is stamp coupling?",
+        "answer": "When several modules have access to a shared data structure."
+    },
+    {
+        "question": "What is data coupling?",
+        "answer": "When modules share data through parameters."
+    },
+    {
+        "question": "What is the impact of high coupling?",
+        "answer": "Delay time to market, additional testing and environment setup, additional risk of impact, lack of visibility."
     }
 ]
