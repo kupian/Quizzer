@@ -4,6 +4,7 @@
 
 import json
 import random
+from glob import glob
 
 from similarityChecker import mark_answer
 
@@ -90,11 +91,14 @@ def print_results(data, user_answers, user_data):
 
 
 def quiz(filenames):
-    # read in questionAnswers.json file
+    GLOB_PATH = "quizFiles/*.json"
+    QUIZ_FILE_PATH = "quizFiles/"
     data = []
     for filename in filenames:
-        with open(filename) as f:
-            data = data + json.load(f)
+        filename = QUIZ_FILE_PATH + filename
+        if str(filename) in glob(GLOB_PATH):
+            with open(filename) as f:
+                data += json.load(f)
 
     # ask user questions from the file
     # randomise the order of questions
