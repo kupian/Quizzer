@@ -106,6 +106,11 @@ def quiz():
     with open(glob(GLOB_PATH)[int(fileIndex)-1]) as f:
         data = json.load(f)
 
+    numberOfQuestions = input(f"Select a number of questions from 1 to {len(data)}: ")
+    while not numberOfQuestions.isdigit() or int(numberOfQuestions) < 1 or int(numberOfQuestions) > len(data):
+        numberOfQuestions = input(f"Select a number of questions from 1 to {len(data)}: ")
+    numberOfQuestions = int(numberOfQuestions)
+
     # ask user questions from the file
     # randomise the order of questions
     random.shuffle(data)
@@ -116,7 +121,7 @@ def quiz():
         'correct_answers': 0,
     }
 
-    for question in data:
+    for question in data[:numberOfQuestions]:
         print(question['question'])
         user_answer = input('Your answer: ')
         user_answers[question['question']] = user_answer
@@ -130,7 +135,7 @@ def quiz():
 
         print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}")
 
-    print_results(data, user_answers, user_data)
+    print_results(data[:numberOfQuestions], user_answers, user_data)
 
 
 def main():

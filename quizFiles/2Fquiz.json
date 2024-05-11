@@ -197,7 +197,7 @@
     },
     {
         "question": "What is the cardinality of Sn?",
-        "answer": "n!"
+        "answer": "n factorial"
     },
     {
         "question": "What is the product of two permuations ab?",
