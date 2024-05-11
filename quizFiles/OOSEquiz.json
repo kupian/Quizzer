@@ -128,5 +128,46 @@
     {
         "question": "What does an effective bug triage require?",
         "answer": "Knowledge about the system / project, descriptive bug reports, good rates of reporting bugs, and coordination with developers."
+    },
+
+    {
+        "question": "What is a bug pattern?",
+        "answer": "Bug patterns are recurring relations between signalled errors and underlying bugs in a program."
+    },
+    {
+        "question": "Briefly describe object des-serialisation.",
+        "answer": "Serialisation and de-serialisation is the process of turning objects into byte streams and back again."
+    },
+    {
+        "question": "Briefly describe trust boundary violations.",
+        "answer": "Trust boundary violations occur when data crosses a trust boundary and is used in a context that assumes it is trustworthy."
+    },
+    {
+        "question": "What are the categories of a bug pattern?",
+        "answer": "Correctness of the program, not conforming to best practices, malicious code vulnerability, multithreaded correctness, performance, security."
+    },
+    {
+        "question": "What is debugging?",
+        "answer": "The process of using the symptoms of a bug to find and fix its underlying cause in code, design, or specification."
+    },
+    {
+        "question": "What is the soundness of a static analysis program?",
+        "answer": "An alert is raised whenever there is a bug in the code."
+    },
+    {
+        "question": "What is the precision of a static analysis program?",
+        "answer": "Every bug alert in the program is actually a bug."
+    },
+    {
+        "question": "What are some consequences of a static analysis program designed to overestimate possible program behaviours?",
+        "answer": "The program never misses a bug, but may report some false warnings. Analysis may report so many false warnings, that real bugs cannot be found."
+    },
+    {
+        "question": "What are some consequences of a static analysis program designed to underestimate possible program behaviours?",
+        "answer": "The program never reports a false warning, but may miss some bugs. Analysis may miss so many bugs that the program is not useful."
+    },
+    {
+        "question": "What are some consequences of a static analysis program designed to make balanced approximations?",
+        "answer": "It is neither sound not precise. It misses some real bugs and reports some false warnings, but will be useful."
     }
 ]
