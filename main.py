@@ -19,8 +19,6 @@ def print_results(data, user_answers, user_data):
     TABLE_WIDTH = COLUMN_WIDTH * 3
 
     def get_result_string(strings, correct, score):
-
-        score = str(round(score, 4))
         
         def process_string(s, result):
             offset = s[0]
@@ -45,7 +43,7 @@ def print_results(data, user_answers, user_data):
         for i, s in enumerate(strings):
             result = process_string((i+1, s), result)
 
-        print(f"{Colours.GREEN if correct else Colours.RED}{result}[{score}]{Colours.END}")
+        print(f"{Colours.GREEN if correct else Colours.RED}{result}[{round(score, 4)}]{Colours.END}")
         
     def reset_string(s):
         size = 0
@@ -130,7 +128,7 @@ def quiz():
 
         if mode != '1':
             correct, score = mark_answer(question['answer'], user_answers[question['question']])
-            print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{score}]{Colours.END}")
+            print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}")
 
     print_results(data, user_answers, user_data)
 
