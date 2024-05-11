@@ -1,0 +1,182 @@
+[
+    {
+        "question": "What is the definition of a binary operation?",
+        "answer": "A binary operation on a set S is a rule which can take any two elements in S and combine them to produce a new element in S"
+    },
+    {
+        "question": "What two ways can we define a binary operation on a finite set?",
+        "answer": "Using a rule/formula or a table"
+    },
+    {
+        "question": "What does it mean for a subset to be closed under a binary operation?",
+        "answer": "Applying the operation to two elements of the set always results in another element of the set"
+    },
+    {
+        "question": "In the following formula, what are X and Y? f: X -> Y",
+        "answer": "Domain and Codomain"
+    },
+    {
+        "question": "What are the domain and codomain of a binary function on a set S?",
+        "answer": "SxS -> S"
+    },
+    {
+        "question": "What is associativity of a binary function?",
+        "answer": "(x*y)*z = x*(y*z) for all x,y,z in S"
+    },
+    {
+        "question": "What is commutativity of a binary function?",
+        "answer": "x*y = y*x for all x,y in S"
+    },
+    {
+        "question": "What is an identity element of a binary function?",
+        "answer": "An element e in S such that x*e = e*x = x for all x in S"
+    },
+    {
+        "question": "What is an inverse element of a binary function?",
+        "answer": "The inverse element of x, is a y in S such that x*y = y*x = e"
+    },
+    {
+        "question": "What is the proof that S has at most one identity element?",
+        "answer": "Assume it has two, e = e*e' = e', hence there is at most one"
+    },
+    {
+        "question": "What is the proof that an element has at most one inverse?",
+        "answer": "Assume it has two, y = y*e = y*(x*y') = (y*x)*y' = e*y' = y', hence there is at most one"
+    },
+    {
+        "question": "What is the residue of a mod n?",
+        "answer": "The remainder of a when divided by n"
+    },
+    {
+        "question": "What does it mean for a to be congruent to b mod n?",
+        "answer": "The remainder of a when divided by n is the same as when b is divided by n"
+    },
+    {
+        "question": "What is are additive and multiplicative inverses?",
+        "answer": "The elements that bring another element to the additive and multiplicative identities"
+    },
+    {
+        "question": "What is the condition for an element to have a multiplicative inverse in Zn",
+        "answer": "The element must be coprime to n"
+    },
+    {
+        "question": "What is a field and what are the field axioms? [hint: two binary operations and ten axioms]",
+        "answer": "A field is a set F together with an addition operation and a multiplication operation. The axioms are: associativity of addition, commutativity of addition, additive identity (denoted 0), additive inverses, associativity of multiplication, commutativity of multiplication, multiplicative identity (usually denoted 1), multiplicative inverses for all elements except 0 (the additive identity), distributive law, and non-triviality (0 does not equal 1)"
+    },
+    {
+        "question": "How are subtraction and multiplication defined on fields?",
+        "answer": "a - b = a + (-b) where -b is the additive inverse of b, a/b = ab^-1 where b^-1 is the multiplicative inverse of b"
+    },
+    {
+        "question": "What is a vector space? [Hint: two operations and eight exioms]",
+        "answer": "A vector space over F is a set V together with vector addition and scalar multiplication. The axioms are: associativity of addition, commutativity of addition, additive identity (the zero vector), additive inverses, associativity of scalar multiplication, identity for scalar multiplication, left distributive law, right distributive law"
+    },
+    {  
+        "question": "What is the proof that if v+w=v then w=0?",
+        "answer": "Add -v to both sides leaving w=0"
+    },
+    {  
+        "question": "What is the proof that 0v = 0?",
+        "answer": "Left distributive law gives 0v + 0v = (0+0)v = 0v"
+    },
+    {  
+        "question": "What is the proof that a0 = 0?",
+        "answer": "Right distributive law gives a0 + a0 = a(0+0) = a0"
+    },
+    {  
+        "question": "What is a linear combination of vectors v1,...,vn?",
+        "answer": "Is any vector of the form a1v1 + a2v2 + ... + anvn"
+    },
+    {  
+        "question": "What is span(v1,...,vn)?",
+        "answer": "Is the set of all linear combinations of v1,...,vn"
+    },
+    {  
+        "question": "What is a subspace? [Hint: 3 conditions]",
+        "answer": "Given a vector space V over a field F, a subset S is a subspace given the following 3 conditions hold: the set S is nonempty, closed under vector addition, closed under scalar multiplication"
+    },
+    {  
+        "question": "What does it mean for a set of vectors to be linearly dependent / independent?",
+        "answer": "A linear combination of the vectors equals 0... independent: only when scalars are all 0, dependent: does not need to be all 0s"
+    },
+    {  
+        "question": "How do we tell if a set of vectors is linearly independent or dependent?",
+        "answer": "Dependent: one of the vectors can be written as a linear combination of the others. Independent: write out as constants and solve for 0s"
+    },
+    {  
+        "question": "What is a basis?",
+        "answer": "A basis for a vector space V is a set B = {b1,...,bn} such that all vectors in V can be expressed as exactly one linear combination of B [span(b1,...,bn) = V and are linearly independent]"
+    },
+    {  
+        "question": "What is a coordinate vector?",
+        "answer": "A vector v has coordinates a1,...,an wrt a basis B where v = a1b1 + ... + anbn, we write this as [v]B = [a1,...,an]"
+    },
+    {  
+        "question": "What is the dimension of a vector space?",
+        "answer": "The cardinality of the basis"
+    },
+    {  
+        "question": "What are the possible dimensions of a subspace?",
+        "answer": "dim(S) <= dim(V), if dim(S) = dim(V) then S = V"
+    },
+    {  
+        "question": "How do we find the basis of a vector space from a span?",
+        "answer": "Make the span linearly independent"
+    },
+    {  
+        "question": "Given an n-dimensional vector space V, what can we say about a set of n+1 vectors, n-1 vectors, and n linearly independent vectors?",
+        "answer": "n+1: linearly dependent, n-1: cannot span V, n: basis for V [Proofs: consider the subspaces formed by their spans, compare their dimensions with dim(V)]"
+    },
+    {  
+        "question": "What is a linear transformation?",
+        "answer": "A function T: V -> W for vector spaces V and W such that: T(v + w) = T(v) + T(w), T(kv) = kT(v)"
+    },
+    {  
+        "question": "When is a function T:R^n -> R^n an isometry?",
+        "answer": "When it preserves distance, || v - w || = || T(v) - T(w) ||"
+    },
+    {  
+        "question": "How do we find the matrix A of a linear transformation T: V -> W?",
+        "answer": "The columns of A are [T(b1)]C ... [T(bn)]C: denoted [T]B->C"
+    },
+    {  
+        "question": "What is the null space of a matrix / kernel of a linear transformation",
+        "answer": "The set of vectors v in V such that T(v) = 0 / Av = 0"
+    },
+    {  
+        "question": "What is the column space of a matrix / image of a linear transformation",
+        "answer": "The set of possible values of T(v) / linear combinations of the columns of a matrix"
+    },
+    {  
+        "question": "What is the nullity and rank of a linear transformation?",
+        "answer": "The dimension of the kernel and the image"
+    },
+    {  
+        "question": "What is the rank nullity theorem?",
+        "answer": "rank(T) + nullity(T) = n / dim(V)"
+    },
+    {  
+        "question": "What are the dimension constraints on rank and nullity?",
+        "answer": "nullity <= dim(V), rank <= dim(W)"
+    },
+    {  
+        "question": "What are injective, surjective and bijective functions?",
+        "answer": "No two inputs share an output; every element in the codomain is in the image; both"
+    },
+    {  
+        "question": "For a linear transformation T: V -> W, T is injective/surjective if and only if...",
+        "answer": "nullity(T) = 0 / rank(T) = dim(W)"
+    },
+    {  
+        "question": "What is the relationship between dim(V) and dim(W) for injective, surjective and bijective functions?",
+        "answer": "Injective: dim(V) <= dim(W), Surjective: dim(V) >= dim(W), Bijective: dim(V) = dim(W)"
+    },
+    {  
+        "question": "When is a linear transformation an isomorphism?",
+        "answer": "When it is bijective"
+    },
+    {  
+        "question": "What is a change of basis matrix, and how do we find it?",
+        "answer": "Matrix A such that [v]C = A [v]B, the columns of A are [b1]C ... [bn]C"
+    }
+]

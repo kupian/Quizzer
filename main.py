@@ -95,6 +95,8 @@ def print_results(data, user_answers, user_data):
 def quiz(filenames):
     GLOB_PATH = "quizFiles/*.json"
     QUIZ_FILE_PATH = "quizFiles/"
+    # read in questionAnswers.json file
+    mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
     data = []
     for filename in filenames:
         filename = QUIZ_FILE_PATH + filename
@@ -120,6 +122,12 @@ def quiz(filenames):
             user_data['questions_answered'] += 1
         if mark_answer(question['answer'], user_answer)[0]:
             user_data['correct_answers'] += 1
+        if mode != 1:
+            correct, score = mark_answer(question['answer'], user_answers[question['question']])
+            if correct:
+                print(Colours.GREEN + "Correct answer was: " + question['answer'] + Colours.END)
+            else:
+                print(Colours.RED + "Correct answer was: " + question['answer'] + Colours.END)
 
     print_results(data, user_answers, user_data)
 
