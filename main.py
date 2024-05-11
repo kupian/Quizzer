@@ -45,10 +45,7 @@ def print_results(data, user_answers, user_data):
         for i, s in enumerate(strings):
             result = process_string((i+1, s), result)
 
-        if correct:
-            print(Colours.GREEN + result + score + Colours.END)
-        else:
-            print(Colours.RED + result + score + Colours.END)
+        print(f"{Colours.GREEN if correct else Colours.RED}{result}[{score}]{Colours.END}")
         
     def reset_string(s):
         size = 0
@@ -96,7 +93,7 @@ def quiz(filenames):
     GLOB_PATH = "quizFiles/*.json"
     QUIZ_FILE_PATH = "quizFiles/"
     # read in questionAnswers.json file
-    mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
+    mode = int(input('Select a mode (1 = answers only at end, 2 = answers also as you go): '))
     data = []
     for filename in filenames:
         filename = QUIZ_FILE_PATH + filename
@@ -113,6 +110,7 @@ def quiz(filenames):
         'total_questions': 0,
         'correct_answers': 0,
     }
+    
     for question in data:
         print(question['question'])
         user_answer = input('Your answer: ')
@@ -122,18 +120,16 @@ def quiz(filenames):
             user_data['questions_answered'] += 1
         if mark_answer(question['answer'], user_answer)[0]:
             user_data['correct_answers'] += 1
+
         if mode != 1:
             correct, score = mark_answer(question['answer'], user_answers[question['question']])
-            if correct:
-                print(Colours.GREEN + "Correct answer was: " + question['answer'] + Colours.END)
-            else:
-                print(Colours.RED + "Correct answer was: " + question['answer'] + Colours.END)
+            print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{score}]{Colours.END}")
 
     print_results(data, user_answers, user_data)
 
 
 def main():
-    quiz(['OOSEquiz.json'])
+    quiz(['test.json'])
 
 
 if __name__ == '__main__':
