@@ -89,17 +89,24 @@ def print_results(data, user_answers, user_data):
         print('-' * TABLE_WIDTH)
 
 
-def quiz(filenames):
+def quiz():
     GLOB_PATH = "quizFiles/*.json"
-    QUIZ_FILE_PATH = "quizFiles/"
-    # read in questionAnswers.json file
-    mode = int(input('Select a mode (1 = answers only at end, 2 = answers also as you go): '))
+
+    # read in quiz file
+    mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
+    while mode not in ['1', '2']:
+        mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
+
     data = []
-    for filename in filenames:
-        filename = QUIZ_FILE_PATH + filename
-        if str(filename) in glob(GLOB_PATH):
-            with open(filename) as f:
-                data += json.load(f)
+    for i, filename in enumerate(glob(GLOB_PATH)):
+        print(f"[{i+1}] {filename.split('/')[-1].split('.')[0]}")
+
+    fileIndex = input('Select a file: ')
+    while not fileIndex.isdigit() or int(fileIndex) < 1 or int(fileIndex) > len(glob(GLOB_PATH)):
+        fileIndex = input('Select a file: ')
+    
+    with open(glob(GLOB_PATH)[int(fileIndex)-1]) as f:
+        data = json.load(f)
 
     # ask user questions from the file
     # randomise the order of questions
@@ -110,7 +117,7 @@ def quiz(filenames):
         'total_questions': 0,
         'correct_answers': 0,
     }
-    
+
     for question in data:
         print(question['question'])
         user_answer = input('Your answer: ')
@@ -121,7 +128,7 @@ def quiz(filenames):
         if mark_answer(question['answer'], user_answer)[0]:
             user_data['correct_answers'] += 1
 
-        if mode != 1:
+        if mode != '1':
             correct, score = mark_answer(question['answer'], user_answers[question['question']])
             print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{score}]{Colours.END}")
 
@@ -129,7 +136,7 @@ def quiz(filenames):
 
 
 def main():
-    quiz(['test.json'])
+    quiz()
 
 
 if __name__ == '__main__':
