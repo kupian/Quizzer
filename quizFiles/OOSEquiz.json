@@ -79,5 +79,54 @@
     {
         "question": "What is the impact of high coupling?",
         "answer": "Delay time to market, additional testing and environment setup, additional risk of impact, lack of visibility."
+    },
+
+    {
+        "question": "What are the different types of potential bugs?",
+        "answer": "Software doesn't do something that the specification says it should do, software does something that the specification says it shouldn't do, software does something that the specification doesn't mention, software doesn't do something that the specification doesn't mention but it should, software is difficult to understand or slow, or otherwise not right."
+    },
+    {
+        "question": "What is the number one cause of software bugs?",
+        "answer": "The specification."
+    },
+    {
+        "question": "Why is specification the number one cause of software bugs?",
+        "answer": "It may be unwritten or incomplete, ambiguous, constantly changing, or not communicated to the development team."
+    },
+    {
+        "question": "What is the second leading cause of software bugs?",
+        "answer": "Bad design."
+    },
+    {
+        "question": "Why is bad design a leading cause of software bugs?",
+        "answer": "Due to inappropriate modelling, lack of modelling tools, or time to market pressures."
+    },
+    {
+        "question": "What is the third leading cause of software bugs?",
+        "answer": "Bad coding."
+    },
+    {
+        "question": "Why is bad coding a leading cause of software bugs?",
+        "answer": "Due to software complexity, poor documentation, limited time, or programmer skills."
+    },
+    {
+        "question": "What are some typical coding mistakes?",
+        "answer": "Syntax errors, improper use of class library, override error, scope boundary error, algorithm error, missing operation, need refactoring, unnecessary code."
+    },
+    {
+        "question": "What is software reliability measured with?",
+        "answer": "Mean Time Between Failures (MBTF)."
+    },
+    {
+        "question": "What is the bug tracking workflow?",
+        "answer": "A tester finds a bug and reports it, the bug is assigned to a manager for initial triage, the manager resolves it or assigns it to a developer, the resolved bug is returned to the tester, and the tester either closes the bug or reopens with additional information."
+    },
+    {
+        "question": "WHat is bug triaging?",
+        "answer": "The process of assigning a bug to the most appropriate / capable developer to address it."
+    },
+    {
+        "question": "What does an effective bug triage require?",
+        "answer": "Knowledge about the system / project, descriptive bug reports, good rates of reporting bugs, and coordination with developers."
     }
 ]
