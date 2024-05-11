@@ -91,9 +91,9 @@ def quiz():
     GLOB_PATH = "quizFiles/*.json"
 
     # read in quiz file
-    mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
-    while mode not in ['1', '2']:
-        mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
+    # mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
+    # while mode not in ['1', '2']:
+    #     mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
 
     data = []
     for i, filename in enumerate(glob(GLOB_PATH)):
@@ -123,12 +123,12 @@ def quiz():
         user_data['total_questions'] += 1
         if len(user_answer) > 0:
             user_data['questions_answered'] += 1
-        if mark_answer(question['answer'], user_answer)[0]:
+
+        correct, score = mark_answer(question['answer'], user_answers[question['question']])
+        if correct:
             user_data['correct_answers'] += 1
 
-        if mode != '1':
-            correct, score = mark_answer(question['answer'], user_answers[question['question']])
-            print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}")
+        print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}")
 
     print_results(data, user_answers, user_data)
 

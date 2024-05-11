@@ -7,7 +7,7 @@ def preprocess(text):
     text = text.translate(str.maketrans('', '', string.punctuation))
     return text
 
-def mark_answer(answer, user_answer, threshold=0.25):
+def mark_answer(answer, user_answer, threshold=0.24):
     correct_answer = preprocess(answer)
     user_answer = preprocess(user_answer)
 
