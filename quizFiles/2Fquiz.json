@@ -178,5 +178,133 @@
     {  
         "question": "What is a change of basis matrix, and how do we find it?",
         "answer": "Matrix A such that [v]C = A [v]B, the columns of A are [b1]C ... [bn]C"
+    },
+    {
+        "question": "What is a permutation?",
+        "answer": "A bijectve function a: {1,...,n} -> {1,...,n}"
+    },
+    {
+        "question": "What is a k-cycle?",
+        "answer": "A permutations that maps i1 -> i2 -> ... -> ik -> i1"
+    },
+    {
+        "question": "What is a transposition?",
+        "answer": "A permutation that swaps two numbers and acts as the identity elsewhere"
+    },
+    {
+        "question": "What is the symmetric group?",
+        "answer": "Sn : the set of all permutations of {1,...,n}"
+    },
+    {
+        "question": "What is the cardinality of Sn?",
+        "answer": "n!"
+    },
+    {
+        "question": "What is the product of two permuations ab?",
+        "answer": "ab(i) = a(b(i))"
+    },
+    {
+        "question": "Permutation multiplication is a binary operation, describe its propertites.",
+        "answer": "Associativity, identity, inverses, not commutative"
+    },
+    {
+        "question": "When are cycles disjoint?",
+        "answer": "Cycles that share no elements (they are commutative!)"
+    },
+    {
+        "question": "What is the inverse of a k-cycle?",
+        "answer": "The cycle in reverse"
+    },
+    {
+        "question": "What is (ab)^-1?",
+        "answer": "b^-1 a^-1"
+    },
+    {
+        "question": "What is cycle decomposition of a permutation?",
+        "answer": "The disjoint cycles of a permutation"
+    },
+    {
+        "question": "What is the order of a permutation?",
+        "answer": "|a| = k, such that k is the smallest integer so that a^k = e"
+    },
+    {
+        "question": "How do we know what power a^i is equal to?",
+        "answer": "If a has order k, then a^i = a^(i mod k)"
+    },
+    {
+        "question": "What is the order of a permutation using its cycle lengths?",
+        "answer": "The least common multiple of the cycle lengths"
+    },
+    {
+        "question": "What is a group?",
+        "answer": "A group is a set G together with a binary operation, denoted by juxtaposition; that is associative, has an identity, and inverses"
+    },
+    {
+        "question": "What is an abelian group?",
+        "answer": "A commutative group"
+    },
+    {
+        "question": "What is the order of a group?",
+        "answer": "|G| : the number of elements in G"
+    },
+    {
+        "question": "What is the order of an element g of a group G?",
+        "answer": "|g| : the smallest positive integer n such that g^n = e"
+    },
+    {
+        "question": "What is an additive group?",
+        "answer": "A group whose binary operation is written +, typically is abelian, powers are denoted as multiples"
+    },
+    {
+        "question": "What is a subgroup?",
+        "answer": "A subset S of a group G such that S is nonempty (every subgroup contains the identity), closed under multiplication, and closed under inversion. Subgroups are groups themseleves."
+    },
+    {
+        "question": "What is a cyclic subgroup?",
+        "answer": "The set <a> = {a^n | n in Z}"
+    },
+    {
+        "question": "What is the order of a cyclic subgroup?",
+        "answer": "The order of the generator"
+    },
+    {
+        "question": "What is the subgroup <a1,...,an>?",
+        "answer": "The set of all elements of G that can be made starting from a1,...,an"
+    },
+    {
+        "question": "What does it mean for elements to be generators for G",
+        "answer": "<elements> = G"
+    },
+    {
+        "question": "What are the binary operations on Zn and Z{x,n}?",
+        "answer": "Addition and multiplication respectively"
+    },
+    {
+        "question": "What is a symmetry and what is a symmetry group?",
+        "answer": "For a plane figure F, a symmetry is any isometry from F to F, and a symmetry group is the group of all symmetries under the composition operation"
+    },
+    {
+        "question": "What is a dihedral group? What is it's order and what are the elements?",
+        "answer": "Dn, the symmetry group of a regular n-gon for n >= 3, it has order 2n: the n rotations e,r,...,r^n-1 where r is the counterclockwise rotation by 2pi/n and the n reflections s,rs,...,r^n-1 s"
+    },
+    {
+        "question": "What are the matrix representations of r and s?",
+        "answer": "r = [{cos(2pi/n) , -sin(2pi/n)} , {sin(2pi/n), cos(2pi/n)}], s = [{1, 0} , {0, -1}]"
+    },
+    {
+        "question": "Give the generating set and relations for a dihedral group.",
+        "answer": "{r,s} where r^n = e, s^2 = e, sr = r^-1 s"
+    },
+    {
+        "question": "Prove that s r^k = r^-k s",
+        "answer": "sr = r^-1 s -> sr^2 = r^-1 sr -> sr^2 = r^-2s -> ..."
+    },
+    {
+        "question": "What is a group presentation?",
+        "answer": "For a group G consists of a generating set {a1, . . . , am}, and a set {R1, . . . , Rn} of defining relations. It is usually written as ⟨a1, . . . , am | R1, . . . , Rn⟩ and G is said to be defined by this presentation"
+    },
+    {
+        "question": "What is the group presentation for Dn?",
+        "answer": "< r,s | r^n = e, s^2 = e, sr = r^-1 s>"
     }
 ]
