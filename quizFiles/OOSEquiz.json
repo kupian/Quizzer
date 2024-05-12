@@ -169,5 +169,39 @@
     {
         "question": "What are some consequences of a static analysis program designed to make balanced approximations?",
         "answer": "It is neither sound not precise. It misses some real bugs and reports some false warnings, but will be useful."
+    },
+
+    {
+        "question": "What is a class diagram?",
+        "answer": "A blueprint or model of the system that you are building."
+    },
+    {
+        "question": "What is used to produce a class diagram?",
+        "answer": "Unified Model Language (UML)."
+    },
+    {
+        "question": "In a class diagram, what does a + and - symbol represent, next to an attribute or method?",
+        "answer": "+ represents public, - represents private."
+    },
+    {
+        "question": "In a class diagram, what does a hollow pointed arrow between two classes indicate?",
+        "answer": "A hollow pointed arrow is commonly used to indicate a direct association. It signifies that one class inherits from the other."
+    },
+    {
+        "question": "In a class diagram, how can multiplicity be represented?",
+        "answer": "By using a number or range of numbers next to the association line."
+    },
+    {
+        "question": "In a class diagram, what does a solid line with a hollow diamond at one end represent?",
+        "answer": "Aggregation. This is when one class holds a collection of another."
+    },
+    {
+        "question": "In a class diagram, what does a solid line with a solid diamond at one end represent?",
+        "answer": "Composition. This is when one class contains another, and the contained object cannot exist outside of it."
+    },
+
+    {
+        "question": "Why is clean code and refactoring important?",
+        "answer": "Easier to follow, better for team onboarding, more time spent on new features, less time spent on debugging, less time spent on maintenance."
     }
 ]
