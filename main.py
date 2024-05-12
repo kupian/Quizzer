@@ -4,6 +4,8 @@
 
 import json
 import random
+import math
+import sys
 from glob import glob
 
 from similarityChecker import mark_answer
@@ -107,6 +109,13 @@ def main():
     data = []
     with open(glob(GLOB_PATH)[int(fileIndex)-1]) as f:
         data = json.load(f)
+
+    range = (0,len(data))
+    if (len(sys.argv) > 2):
+        if (sys.argv[1].isdigit() and sys.argv[2].isdigit()):
+            range = (math.floor(int(sys.argv[1])/100*len(data)), math.floor(int(sys.argv[2])/100*len(data)))
+
+    data = data[range[0]:range[1]]
     random.shuffle(data)
 
     numberOfQuestions = int(get_valid_input(f"Select a number of questions from 1 to {len(data)}: ", 1, len(data)))
