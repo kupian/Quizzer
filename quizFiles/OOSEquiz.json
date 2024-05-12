@@ -231,5 +231,120 @@
     {
         "question": "What are some refactoring smells?",
         "answer": "Duplicate code, long methods, switch statements, alternative classes with different interfaces, inappropriate intimacy."
+    },
+
+    {
+        "question": "What are some common coding styles?",
+        "answer": "Single developer, code review, pair programming, mob programming, test driven development."
+    },
+    {
+        "question": "Briefly describe single programming.",
+        "answer": "A single person writes, reviews, tests, and deploys the code."
+    },
+    {
+        "question": "Briefly describe code review.",
+        "answer": "One developer writes the code, and one or more other developers review the code and give feedback."
+    },
+    {
+        "question": "What are some advantages of code review?",
+        "answer": "Highlights mistakes, avoids duplication, increases shared knowledge."
+    },
+    {
+        "question": "What are some disadvantages of code review?",
+        "answer": "Takes time, there is animosity, can cause blame culture and decrease team morale."
+    },
+    {
+        "question": "Briefly describe pair programming.",
+        "answer": "One driver creates and types the code, while one observer watches and looks for mistakes, and discusses points. Roles are switched regularly."
+    },
+    {
+        "question": "What are some advantages of pair programming?",
+        "answer": "There is shared knowledge, there is no single point of failure, and it improves code quality."
+    },
+    {
+        "question": "What are some disadvantages of pair programming?",
+        "answer": "It takes longer to develop with discussions, and can cause disagreements."
+    },
+    {
+        "question": "Briefly describe mob programming.",
+        "answer": "One driver creates and types the code, while multiple observers look for mistakes and discuss points. Roles are switched regularly."
+    },
+    {
+        "question": "Briefly describe test driven development.",
+        "answer": "Write tests, tests fail, write code, tests pass, refactor, repeat."
+    },
+
+    {
+        "question": "What can doubling be used for?",
+        "answer": "To read or write to a file / database, or for calls to a web service, other application, or an external library."
+    },
+    {
+        "question": "What is mocking?",
+        "answer": "Mocking is the act of creating a fake object that simulates the behaviour of a real object."
+    },
+    {
+        "question": "What are the benefits of mocking?",
+        "answer": "It can speed up continuous integration testing, help receive faster feedback, remove dependencies on input and output and on external applications."
+    },
+    {
+        "question": "What is the difference between spying and mocking?",
+        "answer": "Mocking creates a fake object, while spying uses a real object."
+    },
+
+    {
+        "question": "Briefly describe scope.",
+        "answer": "Scope establishes the high level description of the system you are building."
+    },
+    {
+        "question": "What is the prototype?",
+        "answer": "A prototype is an early representation of the system that is discarded after it is used to gather information."
+    },
+    {
+        "question": "What are the classifications of prototypes?",
+        "answer": "High / low fidelity and functional / non-functional."
+    },
+    {
+        "question": "What are the different ways of gathering information in a survey format?",
+        "answer": "Likert scale, categorical, true / false, closed question, open ended."
+    },
+    {
+        "question": "What are the benefits of a survey?",
+        "answer": "Easy to compare with other participants, consistency, large scale, and can look at statistics for closed questions."
+    },
+    {
+        "question": "What are the drawbacks of a survey?",
+        "answer": "No follow-up for lack of detail, less accountability."
+    },
+    {
+        "question": "What is a structured interview?",
+        "answer": "A fixed list of questions that are asked in the same order to all participants."
+    },
+    {
+        "question": "What are the benefits of a structured interview?",
+        "answer": "Consistency in responses, allows for easy comparison with other participants, and the interviewer does not need to be skilled."
+    },
+    {
+        "question": "What are the drawbacks of a structured interview?",
+        "answer": "No follow-up for lack of detail, can be boring."
+    },
+    {
+        "question": "What is an unstructured interview?",
+        "answer": "Open questions, with no set list."
+    },
+    {
+        "question": "What are the benefits of an unstructured interview?",
+        "answer": "Can follow-up for lack of detail, and can learn information that you did not know you needed to know."
+    },
+    {
+        "question": "What are the drawbacks of an unstructured interview?",
+        "answer": "Difficult to compare with other participants, no consistency in data gathered, and the interviewer needs to be skilled."
+    },
+    {
+        "question": "What is a focus group?",
+        "answer": "A small group discussion with 2 facilitators and 3-8 stakeholders."
+    },
+    {
+        "question": "What are the benefits of a focus group?",
+        "answer": "Promotes co-questioning where stakeholders can ask each other questions that the facilitators don't know to ask."
     }
 ]
