@@ -203,5 +203,33 @@
     {
         "question": "Why is clean code and refactoring important?",
         "answer": "Easier to follow, better for team onboarding, more time spent on new features, less time spent on debugging, less time spent on maintenance."
+    },
+    {
+        "question": "What do the letters in the acronym SOLID stand for?",
+        "answer": "Single Responsibility Principle, Open/Closed Principle, Liskov Substitution Principle, Interface Segregation Principle, Dependency Inversion Principle."
+    },
+    {
+        "question": "What is the Single Responsibility Principle?",
+        "answer": "A class should do one and only one thing."
+    },
+    {
+        "question": "What is the Open/Closed Principle?",
+        "answer": "A class should be open for extension, but closed for modification."
+    },
+    {
+        "question": "Briefly explain the DRY principle.",
+        "answer": "Don't Repeat Yourself. Write small, reusable units and use these. Achieved through modularisation."
+    },
+    {
+        "question": "What effect does the DRY principle have on code?",
+        "answer": "Saves time and effort, easier to maintain, reduces the possibility of bugs."
+    },
+    {
+        "question": "When should code be refactored?",
+        "answer": "When implementing new functionality, correcting a defect, doing a code review, or when the code is hard to understand."
+    },
+    {
+        "question": "What are some refactoring smells?",
+        "answer": "Duplicate code, long methods, switch statements, alternative classes with different interfaces, inappropriate intimacy."
     }
 ]
