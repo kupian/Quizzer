@@ -87,59 +87,52 @@ def print_results(data, user_answers, user_data):
         print('-' * TABLE_WIDTH)
 
 
-def quiz():
+def main():
     GLOB_PATH = "quizFiles/*.json"
 
-    # read in quiz file
-    # mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
-    # while mode not in ['1', '2']:
-    #     mode = input('Select a mode (1 = answers only at end, 2 = answers also as you go): ')
-
-    data = []
     for i, filename in enumerate(glob(GLOB_PATH)):
         print(f"[{i+1}] {filename.split('/')[-1].split('.')[0]}")
 
-    fileIndex = input('Select a file: ')
-    while not fileIndex.isdigit() or int(fileIndex) < 1 or int(fileIndex) > len(glob(GLOB_PATH)):
-        fileIndex = input('Select a file: ')
+    def get_valid_input(prompt: str, min_val: int, max_val: int):
+        validate_input_digit = lambda input, min_val, max_val: input.isdigit() and (min_val <= int(input) <= max_val)
     
+        user_input = input(prompt)
+        while not validate_input_digit(user_input, min_val, max_val):
+            user_input = input(prompt)
+        
+        return int(user_input)
+
+    fileIndex = get_valid_input('Select a file: ', 1, len(glob(GLOB_PATH)))
+    
+    data = []
     with open(glob(GLOB_PATH)[int(fileIndex)-1]) as f:
         data = json.load(f)
+    random.shuffle(data)
 
-    numberOfQuestions = input(f"Select a number of questions from 1 to {len(data)}: ")
-    while not numberOfQuestions.isdigit() or int(numberOfQuestions) < 1 or int(numberOfQuestions) > len(data):
-        numberOfQuestions = input(f"Select a number of questions from 1 to {len(data)}: ")
-    numberOfQuestions = int(numberOfQuestions)
+    numberOfQuestions = int(get_valid_input(f"Select a number of questions from 1 to {len(data)}: ", 1, len(data)))
 
     # ask user questions from the file
     # randomise the order of questions
-    random.shuffle(data)
     user_answers = {}
     user_data = {
         'questions_answered': 0,
-        'total_questions': 0,
+        'total_questions': len(data[:numberOfQuestions]),
         'correct_answers': 0,
     }
 
     for question in data[:numberOfQuestions]:
         print(question['question'])
+
         user_answer = input('Your answer: ')
         user_answers[question['question']] = user_answer
-        user_data['total_questions'] += 1
-        if len(user_answer) > 0:
-            user_data['questions_answered'] += 1
+        user_data['questions_answered'] += len(user_answer) and 1 
 
         correct, score = mark_answer(question['answer'], user_answers[question['question']])
-        if correct:
-            user_data['correct_answers'] += 1
+        user_data['correct_answers'] += 1 if correct else 0
 
         print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}")
 
     print_results(data[:numberOfQuestions], user_answers, user_data)
-
-
-def main():
-    quiz()
 
 
 if __name__ == '__main__':
