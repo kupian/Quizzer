@@ -116,7 +116,11 @@ def main():
             range = (math.floor(int(sys.argv[1])/100*len(data)), math.floor(int(sys.argv[2])/100*len(data)))
 
     data = data[range[0]:range[1]]
-    random.shuffle(data)
+
+    print("[1] Inorder\n[2] Shuffled")
+    inOrder = get_valid_input('Select an ordering : ', 1, 2)
+    if inOrder != 1:
+        random.shuffle(data)
 
     numberOfQuestions = int(get_valid_input(f"Select a number of questions from 1 to {len(data)}: ", 1, len(data)))
 
