@@ -116,7 +116,7 @@ def main():
     user_answers = {}
     user_data = {
         'questions_answered': 0,
-        'total_questions': len(data[:numberOfQuestions]),
+        'total_questions': numberOfQuestions,
         'correct_answers': 0,
     }
 
