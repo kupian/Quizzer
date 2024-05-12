@@ -92,6 +92,10 @@ def print_results(data, user_answers, user_data):
 def main():
     GLOB_PATH = "quizFiles/*.json"
 
+    print(f"{Colours.GREEN}QUIZZER{Colours.END} by {Colours.RED}Varad and Liam{Colours.END}")
+
+    print("\nSETUP\n")
+
     for i, filename in enumerate(glob(GLOB_PATH)):
         print(f"[{i+1}] {filename.split('/')[-1].split('.')[0]}")
 
@@ -104,7 +108,7 @@ def main():
         
         return int(user_input)
 
-    fileIndex = get_valid_input('Select a file: ', 1, len(glob(GLOB_PATH)))
+    fileIndex = get_valid_input('\nSelect a file: ', 1, len(glob(GLOB_PATH)))
     
     data = []
     with open(glob(GLOB_PATH)[int(fileIndex)-1]) as f:
@@ -117,12 +121,12 @@ def main():
 
     data = data[range[0]:range[1]]
 
-    print("[1] Inorder\n[2] Shuffled")
+    print("\n[1] Inorder\n[2] Shuffled\n")
     inOrder = get_valid_input('Select an ordering : ', 1, 2)
     if inOrder != 1:
         random.shuffle(data)
 
-    numberOfQuestions = int(get_valid_input(f"Select a number of questions from 1 to {len(data)}: ", 1, len(data)))
+    numberOfQuestions = int(get_valid_input(f"\nSelect a number of questions from 1 to {len(data)}: ", 1, len(data)))
 
     # ask user questions from the file
     # randomise the order of questions
@@ -133,8 +137,9 @@ def main():
         'correct_answers': 0,
     }
 
-    for question in data[:numberOfQuestions]:
-        print(question['question'])
+    print("\nQUESTIONS\n")
+    for index, question in enumerate(data[:numberOfQuestions]):
+        print(f"{index+1}) {question['question']}")
 
         user_answer = input('Your answer: ')
         user_answers[question['question']] = user_answer
@@ -143,7 +148,7 @@ def main():
         correct, score = mark_answer(question['answer'], user_answers[question['question']])
         user_data['correct_answers'] += 1 if correct else 0
 
-        print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}")
+        print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}\n")
 
     print_results(data[:numberOfQuestions], user_answers, user_data)
 
