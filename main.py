@@ -7,12 +7,15 @@ import random
 import math
 import sys
 from glob import glob
+from datetime import datetime
 
 from similarityChecker import mark_answer
 
 class Colours:
     RED = '\033[91m'
     GREEN = '\033[92m'
+    BLUE = '\033[94m'
+    ORANGE = '\033[93m'
     END = '\033[0m'
 
 
@@ -66,6 +69,7 @@ def print_results(data, user_answers, user_data):
     print("-" * (COLUMN_WIDTH+2))
     print(f'You answered {user_data["questions_answered"]} out of {user_data["total_questions"]} questions'.ljust(COLUMN_WIDTH+1)+"|")
     print(f'You got {user_data["correct_answers"]} out of {user_data["questions_answered"]} correct'.ljust(COLUMN_WIDTH+1)+"|")
+    print(f'Time taken: {datetime.now() - user_data["start_time"]}'.ljust(COLUMN_WIDTH+1)+"|")
     print("-" * TABLE_WIDTH)
 
     # present all user answers and actual answers at the end
@@ -89,10 +93,10 @@ def print_results(data, user_answers, user_data):
         print('-' * TABLE_WIDTH)
 
 
-def main():
+def setup():
     GLOB_PATH = "quizFiles/*.json"
 
-    print(f"{Colours.GREEN}QUIZZER{Colours.END} by {Colours.RED}Varad and Liam{Colours.END}")
+    print(f"{Colours.BLUE}QUIZZER{Colours.END} by {Colours.ORANGE}Varad and Liam{Colours.END}")
 
     print("\nSETUP\n")
 
@@ -121,12 +125,19 @@ def main():
 
     data = data[range[0]:range[1]]
 
-    print("\n[1] Inorder\n[2] Shuffled\n")
-    inOrder = get_valid_input('Select an ordering : ', 1, 2)
+    print("\n[1] In-order\n[2] Shuffled\n")
+    inOrder = get_valid_input('Select an ordering: ', 1, 2)
     if inOrder != 1:
         random.shuffle(data)
 
-    numberOfQuestions = int(get_valid_input(f"\nSelect a number of questions from 1 to {len(data)}: ", 1, len(data)))
+    numberOfQuestions = int(get_valid_input(f"\nSelect a number of questions from 1 to {len(data)}: ", 1, len(data))) if len(data) > 1 else 1
+
+    return numberOfQuestions, data
+
+
+def main():
+    numberOfQuestions, data = setup()
+    startTime = datetime.now()
 
     # ask user questions from the file
     # randomise the order of questions
@@ -135,6 +146,7 @@ def main():
         'questions_answered': 0,
         'total_questions': numberOfQuestions,
         'correct_answers': 0,
+        'start_time': startTime,
     }
 
     print("\nQUESTIONS\n")
@@ -150,6 +162,7 @@ def main():
 
         print(f"{Colours.GREEN if correct else Colours.RED}Correct answer was: {question['answer']} [{round(score, 4)}]{Colours.END}\n")
 
+    print("\nRESULTS\n")
     print_results(data[:numberOfQuestions], user_answers, user_data)
 
 
