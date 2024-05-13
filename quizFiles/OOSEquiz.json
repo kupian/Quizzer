@@ -122,7 +122,7 @@
         "answer": "A tester finds a bug and reports it, the bug is assigned to a manager for initial triage, the manager resolves it or assigns it to a developer, the resolved bug is returned to the tester, and the tester either closes the bug or reopens with additional information."
     },
     {
-        "question": "WHat is bug triaging?",
+        "question": "What is bug triaging?",
         "answer": "The process of assigning a bug to the most appropriate / capable developer to address it."
     },
     {
@@ -296,7 +296,7 @@
         "answer": "Scope establishes the high level description of the system you are building."
     },
     {
-        "question": "What is the prototype?",
+        "question": "What is a prototype?",
         "answer": "A prototype is an early representation of the system that is discarded after it is used to gather information."
     },
     {
@@ -346,5 +346,110 @@
     {
         "question": "What are the benefits of a focus group?",
         "answer": "Promotes co-questioning where stakeholders can ask each other questions that the facilitators don't know to ask."
+    },
+
+
+    {
+        "question": "What are the three types of design patterns?",
+        "answer": "Creational, structural, behavioural."
+    },
+    {
+        "question": "What are creational design patterns used for?",
+        "answer": "They are used to manage the instantiation of objects."
+    },
+    {
+        "question": "What are structural design patterns used for?",
+        "answer": "They are used to organise how groups of classes interact with one another."
+    },
+    {
+        "question": "What are behavioural design patterns used for?",
+        "answer": "They are used to manage common patterns of communication to an object, respecting the open / closed principle."
+    },
+    {
+        "question": "What are some advantages of design patterns?",
+        "answer": "They create a common language, you can say more with less, they help to stay in design longer, and help reduce misunderstandings."
+    },
+
+    {
+        "question": "Briefly describe the strategy design pattern.",
+        "answer": "The strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from the client that uses it."
+    },
+    {
+        "question": "What are some pros of the strategy design pattern?",
+        "answer": "It allows for easy switching between algorithms, isolating the implementation details of an algorithm, and replaces inheritance with composition."
+    },
+    {
+        "question": "How does the strategy design pattern apply the open / closed principle?",
+        "answer": "It allows for easily introducing new strategies without having to change the context."
+    },
+
+    {
+        "question": "Briefly describe the iterator design pattern.",
+        "answer": "The iterator pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation."
+    },
+    {
+        "question": "What are some pros of the iterator design pattern?",
+        "answer": "It adheres to the single responsibility principle, as well as the open / closed principle."
+    },
+    {
+        "question": "Briefly describe the composite design pattern.",
+        "answer": "The composite pattern allows you to compose objects into tree structures to represent part-whole hierarchies. It lets clients treat individual objects and compositions of objects uniformly."
+    },
+    {
+        "question": "What are some pros of the composite design pattern?",
+        "answer": "It allows for working with complex tree structures more conveniently, and adheres to the open / closed principle."
+    },
+
+    {
+        "question": "Briefly describe the observer design pattern.",
+        "answer": "The observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically."
+    },
+    {
+        "question": "What are some pros of the observer design pattern?",
+        "answer": "It adheres to the open / closed principle, and allows for establishing relations between objects at runtime."
+    },
+    {
+        "question": "What are the three main methods in an Observer class?",
+        "answer": "registerObserver(), removeObserver(), notifyObservers()."
+    },
+
+    {
+        "question": "Briefly describe the singleton design pattern.",
+        "answer": "The singleton pattern ensures that a class has only one instance and provides a global point of access to it."
+    },
+    {
+        "question": "What is the main attribute and method in a singleton class?",
+        "answer": "static uniqueInstance, static getInstance()."
+    },
+    {
+        "question": "In a singleton class, how can we protect against multiple threads?",
+        "answer": "Using a synchronised block to create the unique instance."
+    },
+
+    {
+        "question": "Briefly describe the factory method design pattern.",
+        "answer": "The factory method pattern defines an interface for creating objects, but lets subclasses decide which class to instantiate. It defers instantiation to subclasses."
+    },
+    {
+        "question": "What are some pros of the factory method design pattern?",
+        "answer": "It adheres to the single responsibility principle, as well as the open / closed principle. It also avoids tight coupling between the creator and concrete products."
+    },
+
+    {
+        "question": "Briefly describe the state design pattern.",
+        "answer": "The state pattern allows an object to alter its behaviour when its internal state changes. The object will appear to change its class."
+    },
+    {
+        "question": "What are some pros of the state design pattern?",
+        "answer": "It adheres to the single responsibility principle, as well as the open / closed principle. It also simplifies the code of the context by removing the conditional statements."
+    },
+    
+    {
+        "question": "Briefly describe the decorator design pattern.",
+        "answer": "The decorator pattern attaches additional responsibilities to an object dynamically. It provides a flexible alternative to subclassing for extending functionality."
+    },
+    {
+        "question": "What are some pros of the decorator design pattern?",
+        "answer": "It allows extension of an object's behaviour without making a new subclass, and adheres to the single responsibility principle. It also allows for adding or removing responsibilities from an object at runtime."
     }
 ]
