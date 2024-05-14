@@ -409,7 +409,7 @@
         "answer": "It adheres to the open / closed principle, and allows for establishing relations between objects at runtime."
     },
     {
-        "question": "What are the three main methods in an Observer class?",
+        "question": "What are the three main methods in an Observerable class?",
         "answer": "registerObserver(), removeObserver(), notifyObservers()."
     },
 
