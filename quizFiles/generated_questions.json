@@ -1,0 +1,290 @@
+[
+  {
+    "question": "Why is testing important in software development?",
+    "answer": "Testing helps prevent known errors and future bugs when the code is refactored or modified."
+  },
+  {
+    "question": "What are happy tests?",
+    "answer": "Happy tests are positive scenarios with clean cases that go through the system, designed to test successful execution."
+  },
+  {
+    "question": "What is a code review?",
+    "answer": "A code review involves submitting your code to another software engineer to spot bugs, highlight insufficient testing, and suggest better ways to implement the code."
+  },
+  {
+    "question": "What does unit testing involve?",
+    "answer": "Unit testing involves testing a method with specific input values to get a given output value."
+  },
+  {
+    "question": "What is integration testing?",
+    "answer": "Integration testing involves testing that your code works and interacts well with other applications or third-party APIs."
+  },
+  {
+    "question": "What is system testing?",
+    "answer": "System testing validates a complete system or build rather than just testing the interaction with a selection of applications or APIs."
+  },
+  {
+    "question": "What is usability testing?",
+    "answer": "Usability testing involves assessing the speed and ease of use of the application."
+  },
+  {
+    "question": "How does performance/efficiency testing help an application?",
+    "answer": "Performance/efficiency testing evaluates network traffic, speed, memory usage, and carbon impact of the application."
+  },
+  {
+    "question": "What is API testing?",
+    "answer": "API testing involves testing various API requests and ensuring the response is correct."
+  },
+  {
+    "question": "Why use automated testing?",
+    "answer": "Automated testing allows for building and running tests consistently, provides metrics like code coverage, and helps in getting faster feedback."
+  },
+  {
+    "question": "What makes a good test?",
+    "answer": "A good test includes edge cases, considers test volume, involves multiple calls, handles various input values (empty, negative, positive), and tests for failures and combinations of calls."
+  },
+  {
+    "question": "What is a Singleton Pattern?",
+    "answer": "The Singleton Pattern ensures there is only ever one instance of an object, useful for things like logging instances or device drivers."
+  },
+  {
+    "question": "Why should you avoid assertTrue(a == b) in unit tests?",
+    "answer": "You should avoid assertTrue(a == b) because assertEquals is more appropriate for comparing values."
+  },
+  {
+    "question": "What is chaos engineering?",
+    "answer": "Chaos engineering involves testing a system's ability to withstand failures in production environments by simulating chaos like shutting down servers or injecting latency."
+  },
+  {
+    "question": "What is A/B testing?",
+    "answer": "A/B testing is an experimental method to test a hypothesis by showing one group a default behavior and another a changed behavior, then comparing the outcomes."
+  },
+  {
+    "question": "What is encapsulation?",
+    "answer": "Encapsulation is the bundling of data with the methods that operate on that data while restricting direct access to some of an object's components."
+  },
+  {
+    "question": "What are the main benefits of encapsulation?",
+    "answer": "Encapsulation provides granular control, data integrity, and maintainability, making it easier to manage changes without breaking the entire system."
+  },
+  {
+    "question": "How do you implement encapsulation in Java?",
+    "answer": "Use visibility modifiers (public, private, protected), start with narrowest scope (private), and use getter/setter methods for access."
+  },
+  {
+    "question": "What is abstraction?",
+    "answer": "Abstraction hides as much detail as possible from the user while allowing concrete implementations for different but related types of data."
+  },
+  {
+    "question": "What is the key benefit of abstraction?",
+    "answer": "Abstraction allows you to write code that works on shared concepts, making it possible to handle objects and methods generically even if you haven't seen them before."
+  },
+  {
+    "question": "What are the benefits of inheritance?",
+    "answer": "The main benefits of inheritance are code re-use, extensibility, and the ability to hide data."
+  },
+  {
+    "question": "What is polymorphism?",
+    "answer": "Polymorphism is the ability for the same method name to perform different tasks depending on the context in which it is used."
+  },
+  {
+    "question": "What is software reliability?",
+    "answer": "Software reliability is the probability of failure-free software operation for a specified period under specified conditions."
+  },
+  {
+    "question": "What are the common causes of software bugs?",
+    "answer": "Common causes of software bugs include bad specifications, design flaws, coding errors, and time pressures."
+  },
+  {
+    "question": "What is the Strategy Pattern?",
+    "answer": "The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable, allowing the algorithm to vary independently from the client that uses it."
+  },
+  {
+    "question": "What is a user story?",
+    "answer": "A user story is a simple description of a feature from the perspective of the person who desires the new capability, usually in a format like: As a [user], I want to [goal], so that [reason]."
+  },
+  {
+    "question": "What is the Factory Pattern used for?",
+    "answer": "The Factory Pattern is used to create objects without specifying the exact class of object that will be created, encapsulating the instantiation logic."
+  },
+  {
+    "question": "What distinguishes the Factory Pattern from the Singleton Pattern?",
+    "answer": "While the Singleton Pattern ensures a single instance of a class, the Factory Pattern allows the creation of multiple instances of different classes."
+  },
+  {
+    "question": "What is test-driven development (TDD)?",
+    "answer": "Test-Driven Development (TDD) is a development style where you write a test for a piece of functionality before implementing it, ensuring it fails initially, then write just enough code to pass the test."
+  },
+  {
+    "question": "What are the steps of test-driven development?",
+    "answer": "The steps in TDD are: 1. Write a test, 2. Run the test and see it fail, 3. Write code to pass the test, 4. Refactor the code."
+  },
+  {
+    "question": "What makes a bug according to its strict definition?",
+    "answer": "A bug is any flaw, mistake, or failure in a system that produces incorrect results or causes the system to behave in unintended ways."
+  },
+  {
+    "question": "How does static analysis help in debugging?",
+    "answer": "Static analysis involves using tools to analyze code for potential bugs without executing the program, helping to catch issues early and objectively."
+  },
+  {
+    "question": "What is the Observer Pattern used for?",
+    "answer": "The Observer Pattern is used when an object needs to notify multiple subscribers about state changes without knowing who they are, promoting loose coupling."
+  },
+  {
+    "question": "What is a prototype in requirements gathering?",
+    "answer": "A prototype is an early representation of a system used for gathering feedback and refining requirements, usually not well-engineered or robust."
+  },
+  {
+    "question": "What are the benefits of high cohesion in software design?",
+    "answer": "High cohesion promotes independent development, deployment, scalability, and reusability of components."
+  },
+  {
+    "question": "What are mocks and why are they used in unit testing?",
+    "answer": "Mocks are used to specify return values for methods in unit tests, speeding up testing, removing dependencies, and providing early feedback."
+  },
+  {
+    "question": "What is the main goal of software reliability?",
+    "answer": "The main goal of software reliability is to ensure the probability of failure-free operation of software for a specified period in a specified environment."
+  },
+  {
+    "question": "What is the main difference between encapsulation and abstraction?",
+    "answer": "Encapsulation involves bundling data and methods and hiding internal details, while abstraction focuses on hiding complexity by working with simplified descriptions."
+  },
+  {
+    "question": "What is the purpose of acceptance testing?",
+    "answer": "Acceptance testing is done to validate the system against the customer's requirements and ensure it meets their needs."
+  },
+  {
+    "question": "What is usability testing?",
+    "answer": "Usability testing assesses how user-friendly and efficient an application is by evaluating its speed and ease of use."
+  },
+  {
+    "question": "What is code coverage?",
+    "answer": "Code coverage measures the proportion of lines of code that are executed during tests, indicating how thoroughly the software has been tested."
+  },
+  {
+    "question": "What is the main benefit of using the Strategy Pattern?",
+    "answer": "The Strategy Pattern allows for the encapsulation of different algorithms, making them interchangeable and allowing them to vary independently from the client code that uses them."
+  },
+  {
+    "question": "What are edge cases in testing?",
+    "answer": "Edge cases are input values at the lower or upper edge of expected values, used to ensure the robustness of the application."
+  },
+  {
+    "question": "What is the benefit of pair programming?",
+    "answer": "Pair programming improves code quality, encourages shared knowledge, and helps catch errors early through constant collaboration between two developers."
+  },
+  {
+    "question": "What are the types of software testing levels?",
+    "answer": "The types of software testing levels include unit testing, integration testing, system testing, acceptance testing, GUI testing, and API testing."
+  },
+  {
+    "question": "What is the difference between a mock and a spy in testing?",
+    "answer": "A mock is a complete fake object used for specifying return values, while a spy is a real instance of the class, selectively mocking only specific methods."
+  },
+  {
+    "question": "What is the purpose of a code review?",
+    "answer": "The purpose of a code review is to identify bugs, ensure code quality, share knowledge, and provide constructive feedback to improve the code."
+  },
+  {
+    "question": "What is the Open/Closed principle in software design?",
+    "answer": "The Open/Closed principle states that software entities should be open for extension but closed for modification, promoting maintainability and flexibility."
+  },
+  {
+    "question": "What is multithreaded correctness in bug patterns?",
+    "answer": "Multithreaded correctness involves ensuring that code functions correctly in concurrent environments, avoiding issues like race conditions and deadlocks."
+  },
+  {
+    "question": "What is the role of the Subject interface in the Observer Pattern?",
+    "answer": "The Subject interface in the Observer Pattern defines methods for registering, removing, and notifying observers about state changes."
+  },
+  {
+    "question": "How does the Factory Pattern benefit client code?",
+    "answer": "The Factory Pattern keeps client code simple by moving the instantiation logic to a separate factory class, allowing easy addition of new product types without changing client code."
+  },
+  {
+    "question": "What is the benefit of using abstraction in Java?",
+    "answer": "Abstraction in Java allows for defining abstract classes and interfaces that can be implemented by different classes, promoting flexibility and code reuse."
+  },
+  {
+    "question": "Why is encapsulation important in object-oriented design?",
+    "answer": "Encapsulation is important because it hides the internal workings of objects, prevents unwanted interference, and makes the code easier to maintain and modify."
+  },
+  {
+    "question": "What is the main purpose of security/penetration testing?",
+    "answer": "The main purpose of security/penetration testing is to identify vulnerabilities, ensure data encryption, and prevent unauthorized access to the system."
+  },
+  {
+    "question": "How does system testing differ from integration testing?",
+    "answer": "System testing validates the entire system or build as a whole, while integration testing focuses on ensuring that different modules or systems interact correctly."
+  },
+  {
+    "question": "What is the role of a facilitator in a requirements gathering workshop?",
+    "answer": "A facilitator in a requirements gathering workshop leads the discussion, ensures that all key stakeholders are represented, and helps achieve action items and decisions."
+  },
+  {
+    "question": "What is the benefit of high cohesion in microservices architecture?",
+    "answer": "High cohesion in microservices architecture allows for independent development, deployment, and scalability of smaller, focused services."
+  },
+  {
+    "question": "When is it useful to create a prototype for requirements gathering?",
+    "answer": "Prototypes are useful in requirements gathering when requirements are unclear, the technology is unknown, the team is new, or early feedback is needed."
+  },
+  {
+    "question": "What is the main disadvantage of using the Decorator Pattern?",
+    "answer": "The main disadvantage of the Decorator Pattern is that it can lead to a large number of small classes and increased complexity in understanding the system."
+  },
+  {
+    "question": "What are the benefits of using the State Pattern?",
+    "answer": "The State Pattern allows for removing state logic from the client class, facilitating the addition of new states without impacting the core client class, and reducing conditional logic."
+  },
+  {
+    "question": "What is the difference between lazy instantiation and eager instantiation in the Singleton Pattern?",
+    "answer": "Lazy instantiation creates the singleton instance only when it is first needed, while eager instantiation creates the instance at class loading time."
+  },
+  {
+    "question": "What is the purpose of acceptance testing?",
+    "answer": "Acceptance testing validates the system against the customer's requirements to ensure it meets their needs before deployment."
+  },
+  {
+    "question": "What is the primary goal of the State Pattern?",
+    "answer": "The primary goal of the State Pattern is to allow an object to change its behavior when its internal state changes, making state transitions explicit and manageable."
+  },
+  {
+    "question": "What are the main types of testing characteristics?",
+    "answer": "Main testing characteristics include functionality, usability, security/penetration, performance/efficiency, portability, and reliability."
+  },
+  {
+    "question": "What are the common causes of software bugs?",
+    "answer": "Common causes of software bugs include bad specifications, design flaws, coding errors, and pressures to meet deadlines."
+  },
+  {
+    "question": "What is the main idea behind the Factory Method Pattern?",
+    "answer": "The Factory Method Pattern defines an interface for creating objects but allows subclasses to alter the type of objects that will be created."
+  },
+  {
+    "question": "What is the benefit of using mocking in unit tests?",
+    "answer": "Mocking in unit tests provides faster feedback, removes dependencies, and allows for more focused testing of main functionalities without changing the application's code."
+  },
+  {
+    "question": "What is the primary purpose of code inspections?",
+    "answer": "The primary purpose of code inspections is to manually examine source code to identify defects, improve quality, and ensure compliance with standards, though it can be subjective and labor-intensive."
+  },
+  {
+    "question": "How does SLIM documentation benefit Agile development?",
+    "answer": "SLIM (just enough) documentation in Agile development ensures that only essential documentation is created, providing clarity and reducing overhead, while allowing for flexibility and quick adjustments."
+  },
+  {
+    "question": "Why is minimizing code smells important in software development?",
+    "answer": "Minimizing code smells is important because it helps maintain code readability, prevent future bugs, and make the codebase easier to refactor and extend."
+  },
+  {
+    "question": "What is the main advantage of using version control systems?",
+    "answer": "Version control systems allow for tracking changes, collaborating efficiently, reverting to previous states, and managing different versions of the codebase seamlessly."
+  },
+  {
+    "question": "What are the key principles of the SOLID design principles?",
+    "answer": "The SOLID design principles are: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion principles."
+  }
+]
