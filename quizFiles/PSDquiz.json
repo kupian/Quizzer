@@ -1,0 +1,58 @@
+[
+    {
+        "question": "What makes software intrinsically difficult?",
+        "answer": "Complex: Many interconnected parts. Intangible: Hard to visualise or physically interact with. Malleable: Easy to change, but changes can introduce errors. Scale: Difficult to manage as it grows. Evolutionary: Constantly needs updates and changes."
+    },
+    {
+        "question": "Why do software projects fail?",
+        "answer": "Built for the wrong reason (misunderstood goals). Built as the wrong system (doesn’t meet user needs). Built in the wrong way (inefficient processes or technology)."
+    },
+    {
+        "question": "What does Agile mean in practice?",
+        "answer": "Small teams (3 – 12 devs), Frequent short meetings and informal communication, Deliver small features for regular review, Engage with the customer frequently, Maintain design/code quality through continuous testing, analysing and refactoring, Automate processes when possible, Continuously review and adjust project objectives and processes."
+    },
+    {
+        "question": "What are the risks of Agile development?",
+        "answer": "Lack of customer engagement, Stakeholder conflict, Complex contracts, Loss of organisational memory, Poor code quality or team coordination."
+    },
+    {
+        "question": "What does Agile not mean?",
+        "answer": "Using every Agile practice in a project regardless of context, Achieving flexibility through uncontrolled changes to objectives or processes."
+    },
+    {
+        "question": "What is scrum?",
+        "answer": "Focuses on team, project and process management."
+    },
+    {
+        "question": "What are the roles in scrum (and beyond)?",
+        "answer": "Scrum master, product owner, team manager, quality assurance manager, toolsmith, chief architect, UX designer developer."
+    },
+    {
+        "question": "How does scrum manage work?",
+        "answer": "Work is organised into releases, each with multiple sprints, Sprints typically last 1 – 3 weeks and begin with a planning meeting and end with a review and retrospective, Daily stand-ups (or scrums) happen throughout the sprint."
+    },
+    {
+        "question": "What is the scrum workflow?",
+        "answer": "Involves maintaining a backlog, sprint backlog and delivering incremental improvements to the customer."
+    },
+    {
+        "question": "What happens in the project launch meeting?",
+        "answer": "Define major features for sprints, Understand customer objectives and identify minimum viable product, Set project goals, Create and refine user stories, Populate and triage backlog on GitLab."
+    },
+    {
+        "question": "What happens in release planning meetings?",
+        "answer": "Longer projects have multiple releases, each with several sprints, Identify high-level features for each release, Create a roadmap based on customer priorities and timelines, Populate roadmap with key backlog features, Expect changes during sprint planning."
+    },
+    {
+        "question": "What happens in sprint planning meetings?",
+        "answer": "Set main sprint goal, Select tasks from backlog that align with the goal, Ensure selected tasks have detailed information (cost estimates, priorities, assignees), Confirm task estimates fit within project velocity."
+    },
+    {
+        "question": "What happens in sprint review meetings?",
+        "answer": "Deliver and demo the new software version from the sprint, Summarise progress vs planned work, Highlight additional work completed and missed features, Explain reasons for deviations, Identify new features for future sprints."
+    },
+    {
+        "question": "What is plotted in a burn-down chart?",
+        "answer": "Total outstanding work vs sprint time."
+    }
+]

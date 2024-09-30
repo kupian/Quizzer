@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is systems programming?",
+        "answer": "Writing software that serves other software (e.g. OS, drivers)."
+    },
+    {
+        "question": "Why use systems programming languages?",
+        "answer": "Fine-grained control over program execution."
+    },
+    {
+        "question": "What are common performance constraints for system software?",
+        "answer": "Fast execution time, low memory consumption, low energy usage."
+    },
+    {
+        "question": "How does C program compilation work?",
+        "answer": "1. Preprocessor: Expands macros like #include and #define. 2. Compiler: Converts code to assembly, then to machine code (object file). 3. Linker: Combines object files, checks for missing functions (e.g. printf)."
+    },
+    {
+        "question": "What is the linker's role?",
+        "answer": "Combines object files into one executable. Ensures all functions are correctly linked to their machine code."
+    }
+]
