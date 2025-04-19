@@ -15,11 +15,7 @@ def mark_answer(answer, user_answer, threshold=0.24):
     tfidf_matrix = vectorizer.fit_transform([correct_answer, user_answer])
 
     similarity_score = cosine_similarity(tfidf_matrix)[0,1]
-
-    if similarity_score > threshold:
-        return (True, similarity_score)
-    else:
-        return (False, similarity_score)
+    return similarity_score > threshold, similarity_score
     
 def main():
     answer = "Python is a programming language"
