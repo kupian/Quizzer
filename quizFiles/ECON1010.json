@@ -1,0 +1,62 @@
+[
+    {
+        "question": "What is an Oligopoly?",
+        "answer": "An industry dominated by a small number of firms"
+    },
+    {
+        "question": "What is a Cartel?",
+        "answer": "An oligopoly that tries to act together to reduce supply, raise prices, and increase profits"
+    },
+    {
+        "question": "What is strategic decision making?",
+        "answer": "Decision making in situations that are interactive"
+    },
+    {
+        "question": "Considering the behaviour of a market, what is the goal of a cartel?",
+        "answer": "To move from a competitive market, to a market that behaves as if controlled by a monopolist"
+    },
+    {
+        "question": "What are three reasons cartels tend to collapse?",
+        "answer": "Cheating by cartel members, new entrants and demand response, government prosecution and regulation"
+    },
+    {
+        "question": "What is the Prisoner's Dilemma?",
+        "answer": "A situation in which the pursuit of individual interest leads to a group outcome that is in the interest of no one"
+    },
+    {
+        "question": "What is a Dominant Strategy in Game Theory?",
+        "answer": "A strategy that has a higher payoff than any other, no matter what the other player does"
+    },
+    {
+        "question": "What is Tacit collusion?",
+        "answer": "When firms limit competition with one another but do so without explicit agreement or communication"
+    },
+    {
+        "question": "What does the term \"Barrier to Entry\" refer to?",
+        "answer": "Factors that increase the cost to new firms of entering an industry"
+    },
+    {
+        "question": "What are some barriers to entry that help cartels remain successful?",
+        "answer": "Control over a key resource or input, economies of scale, government barriers"
+    },
+    {
+        "question": "What legal framework outlaws cartels in the USA?",
+        "answer": "Sherman Antitrust Act of 1890"
+    },
+    {
+        "question": "What are three impacts of Government-supported cartels?",
+        "answer": "Higher prices, lower-quality service, less innovation"
+    },
+    {
+        "question": "List three business strategies firms use to reduce competitive pressures:",
+        "answer": "Price matching, Loyalty plans, innovation"
+    },
+    {
+        "question": "What do firms aim to achieve in the market, through innovation of their products?",
+        "answer": "Fewer substitutes for that product, leading to more inelastic demand for that product"
+    },
+    {
+        "question": "Where do prices tend to sit in an Oligopoly, relative to the price of a Monopoly and Competitive Market?",
+        "answer": "Prices in an oligopoly tend to be below monopoly prices but above competitive prices"
+    }
+]
