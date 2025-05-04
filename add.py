@@ -21,37 +21,53 @@ def main():
             print("Invalid response. Please enter a number.")
             continue
         if res == MODE.ADD.value:
-            add()
+            quiz = add()
+            if quiz.get("questions") is not None:
+                write(quiz.get("name"), quiz.get("questions"))
+                print("Quiz written to file")
         elif res == MODE.IMPORT.value:
-            pass
+            import_quiz()
 
-def add() -> bool:
+def add() -> dict:
+    '''
+    Generate a new quiz from command line inputs
+    
+    returns: {name: str, questions: list}
+    '''
     questions = []
     
     name = input("Name of quiz: ")
     if os.path.isfile(f"{QUIZ_DIR}/{name}.json"):
         print("Quiz already exists")
-        return False
+        return None
     
     print("Enter 'q' to cancel and quit, 'u' to undo last entry. Leave input blank to finish")
     
     while True:
         question = input("q: ")
-        if question == "q": return False
+        if question == "q": return None
         elif question == "":
-            write(name, questions)
-            print("Quiz written to file")
-            return True
+            return {"name": name, "questions": questions}
         
         answer = input("a: ")
-        if answer == "q": return False
+        if answer == "q": return None
         
         questions.append({
             "question": question,
             "answer": answer
         })
         
+def import_quiz():
+    '''
+    Generates a quiz from a text file
+    '''
+    print("TODO")
+    return False
+        
 def write(name: str, questions: list):
+    '''
+    Write a new quiz to file
+    '''
     with open(f"{QUIZ_DIR}/{name}.json", "w") as f:
         f.write(json.dumps(questions, indent=4))
 
